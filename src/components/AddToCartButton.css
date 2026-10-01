@@ -1,4 +1,4 @@
-button{
+.add-to-cart{
     position: absolute;
     left: 50%;
     width: 65%;
@@ -15,7 +15,7 @@ button{
     transform: translate(-50%, -50%);
 }
 
-button:hover{
+.add-to-cart:hover{
     color: var(--red);
     border: 1px solid var(--red);
     cursor: pointer;
