@@ -10,17 +10,6 @@
     border-radius: 0.5rem;
 }
 
-button{
-    position: absolute;
-    left: 50%;
-    width: 65%;
-    height: 35px;
-    transform: translate(-50%, -50%);
-    background-color: var(--dev-col2);
-    border: none;
-    border-radius: 1rem;
-}
-
 .product-card-container p{
     line-height: 0.5;
 }

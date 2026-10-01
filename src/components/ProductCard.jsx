@@ -1,3 +1,4 @@
+import AddToCartButton from "./AddToCartButton";
 import "./ProductCard.css";
 
 const ProductCard = (props) => {
@@ -7,7 +8,7 @@ const ProductCard = (props) => {
     return(
         <div className="product-card-container">
             <div className="image"></div>
-            <button>Add to Cart</button>
+            <AddToCartButton/>
             <p>Waffle{name}</p>
             <p>Waffle{category}</p>
             <p>$6.7{price}</p>
