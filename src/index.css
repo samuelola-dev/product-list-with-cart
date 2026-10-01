@@ -7,6 +7,11 @@
     --rose-400: hsl(7, 20%, 60%);
     --rose-500: hsl(12, 20%, 44%);
     --rose-900: hsl(14, 65%, 9%);
+
+    --dev-col1: #FF97A1;
+    --dev-col2: #ffc86e;
+    --dev-col3: #1E96FF;
+    --dev-col4: #E0F6FF;
 }
 
 * {
