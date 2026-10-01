@@ -8,15 +8,17 @@ const App = () => {
 
     const [cart, setCart] = useState([]);
 
+    console.log(cart)
+
     return(
         <>
             <main>
                 <section>
                     <h1>Desserts</h1>
-                    <ProductList list={data}/>
+                    <ProductList list={data} cart={cart} setCart={setCart}/>
                 </section>
                 <section>
-                    <OrderSummary/>
+                    <OrderSummary cart={cart}/>
                 </section>
             </main>
         </>

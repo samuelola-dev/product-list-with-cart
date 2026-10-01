@@ -2,7 +2,7 @@ import {useState} from "react";
 import AddToCartButton from "./AddToCartButton";
 import "./ProductCard.css";
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product, cart, setCart}) => {
 
     const {image, name, category, price} = product;
 
@@ -21,6 +21,12 @@ const ProductCard = ({product}) => {
             <AddToCartButton
                 amount={amount} 
                 setAmount={setAmount}
+                product={{
+                    name: product.name,
+                    price: product.price
+                }}
+                cart={cart}
+                setCart={setCart}
             />
 
             <p>{name}</p>

@@ -2,10 +2,45 @@ import {useState} from "react";
 import "./AddToCartButton.css";
 import cartIcon from "../assets/images/icon-add-to-cart.svg";
 
-const AddToCartButton = ({amount, setAmount}) => {
+const AddToCartButton = ({amount, setAmount, product, cart, setCart}) => {
+
+    const increaseAmount = () => {
+        setAmount(amount => amount + 1);
+
+        setCart(cart => {
+
+            const exists = cart.some(item => item.name === product.name);
+
+            if (exists) {
+                return cart.map(item => item.name === product.name
+                    ? {...item, amount: item.amount + 1}
+                    : item
+                )
+            }
+
+            return [...cart, {...product, amount: 1}];
+        })
+    }
+
+        // if cart item name exists in the cart, update the quantity by one
+        // if not add new product to cart
+
+    const decreaseAmount = () => {
+        setAmount(amount =>  amount - 1);
+
+        setCart(cart => {
+
+            return cart
+                .map(item => item.name === product.name
+                    ? {...item, amount: item.amount - 1}
+                    : item
+                )
+                .filter(item => item.amount > 0);
+        });
+    }
 
     const addToCart = (
-        <button className="add-to-cart" onClick={() => setAmount(amount => amount + 1)}>
+        <button className="add-to-cart" onClick={increaseAmount}>
             <img src={cartIcon} alt="cart button"/>
             <span>Add to Cart</span>
         </button>
@@ -16,7 +51,7 @@ const AddToCartButton = ({amount, setAmount}) => {
 
             {/* increase */}
             <button
-                onClick={() => setAmount(amount => amount - 1)}
+                onClick={decreaseAmount}
             >
                 <img src={"/images/icon-decrement-quantity.svg"}/>
             </button>
@@ -25,7 +60,7 @@ const AddToCartButton = ({amount, setAmount}) => {
 
             {/* decrease */}
             <button
-                onClick={() => setAmount(amount => amount + 1)}
+                onClick={increaseAmount}
             >
                 <img src={"/images/icon-increment-quantity.svg"} alt="increase"/>
             </button>

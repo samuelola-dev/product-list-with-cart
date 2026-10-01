@@ -2,23 +2,48 @@ import "./OrderSummary.css"
 import CartItem from "./CartItem";
 import carbonNeutral  from "../assets/images/icon-carbon-neutral.svg";
 
-const OrderSummary = () => {
-    return(
-        <div className="cart-summary">
-            <h2>Your Cart (7)</h2>
-            <CartItem/>
+const OrderSummary = ({cart}) => {
 
+    const emptyOrder = (
+        <div className="empty-order">
+            <img  src={"/images/illustration-empty-cart.svg"} />
+            <p>Your added items will appear here</p>
+        </div>
+    );
+
+    const orderTotal = cart.reduce((total, item) => total + item.price * item.amount, 0);
+
+    const orderSummary = (
+        <>
+            {cart.map((item, index) => (
+                <CartItem
+                    key={index}
+                    name={item.name}
+                    amount={item.amount}
+                    price={item.price}
+                />
+            ))}
+        
             <div className="order-total">
                 <p>Order Total</p>
-                <p>$46.50</p>
+                <p>${orderTotal.toFixed(2)}</p>
             </div>
-
+        
             <div className="cart-info">
                 <img src={carbonNeutral}/>
                 <p>This is a <span>carbon-neutral</span> delivery</p>
             </div>
-
+        
             <button className="confirm-order">Confirm Order</button>
+        </>
+    );
+
+    const empty = cart.length === 0;
+
+    return(
+        <div className="cart-summary">
+            <h2>Your Cart ({cart.length})</h2>
+            {empty ? emptyOrder : orderSummary}
         </div>
     );
 };
