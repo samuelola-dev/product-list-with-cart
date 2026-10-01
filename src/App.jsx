@@ -1,8 +1,13 @@
+import {useState} from "react";
+
 import OrderSummary from "./components/OrderSummary";
 import ProductList from "./components/ProductList";
 import data from "../src/data/data.json";
 
 const App = () => {
+
+    const [cart, setCart] = useState([]);
+
     return(
         <>
             <main>

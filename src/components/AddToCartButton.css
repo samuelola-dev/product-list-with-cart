@@ -1,4 +1,4 @@
-.add-to-cart{
+.add-to-cart, .amount-control{
     position: absolute;
     left: 50%;
     width: 65%;
@@ -21,4 +21,50 @@
     cursor: pointer;
     transition-property: all;
     transition-duration: 0.4s;
+}
+
+.amount-control{
+    justify-content: space-around;
+    color: white;
+    background-color: var(--red);
+    border: none;
+}
+
+/* increment and decrement */
+.amount-control button{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.amount-control button:hover{
+    background-color: white;
+}
+
+.amount-control button img{
+    transition: filter 0.3 ease;
+}
+
+.amount-control button:hover img{
+
+    /* turn svg to var(--red) on hover*/
+    filter: brightness(0) saturate(100%)
+            invert(53.36%)
+            sepia(39.43%)
+            saturate(736.97%)
+            hue-rotate(327.48deg)
+            brightness(68.34%)
+            contrast(159.94%);
+}
+
+
+/* amount */
+.amount-control span{
+    min-width: 3ch;
+    text-align: center;
 }
