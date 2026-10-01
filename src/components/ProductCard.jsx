@@ -1,19 +1,21 @@
 import AddToCartButton from "./AddToCartButton";
 import "./ProductCard.css";
 
-const ProductCard = (props) => {
+const ProductCard = ({product}) => {
 
-    const {image, name, category, price} = props;
+    const {image, name, category, price} = product;
+
+    const {desktop} = image;
 
     return(
         <div className="product-card-container">
-            <div className="image"></div>
+            <img className="image" src={desktop}/>
             <AddToCartButton/>
-            <p>Waffle{name}</p>
-            <p>Waffle{category}</p>
-            <p>$6.7{price}</p>
+            <p>{name}</p>
+            <p>{category}</p>
+            <p>${price.toFixed(2)}</p>
         </div>
-    )
+    );
 };
 
 export default ProductCard;

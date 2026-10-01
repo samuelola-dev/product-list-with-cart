@@ -1,5 +1,6 @@
 import OrderSummary from "./components/OrderSummary";
-import ProductCard from "./components/ProductCard";
+import ProductList from "./components/ProductList";
+import data from "../src/data/data.json";
 
 const App = () => {
     return(
@@ -7,7 +8,7 @@ const App = () => {
             <main>
                 <section>
                     <h1>Desserts</h1>
-                    <ProductCard/>
+                    <ProductList list={data}/>
                 </section>
                 <section>
                     <OrderSummary/>
