@@ -6,8 +6,9 @@
 .image{
     width: 100%;
     height: 235px;
+    display: block;
     border-radius: 0.5rem;
-    transition: outline 0.15s ease;
+    transition: all 0.1s;
 }
 
 .product-card p{
