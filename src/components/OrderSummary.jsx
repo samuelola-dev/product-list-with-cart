@@ -2,7 +2,7 @@ import "./OrderSummary.css"
 import CartItem from "./CartItem";
 import carbonNeutral  from "../assets/images/icon-carbon-neutral.svg";
 
-const OrderSummary = ({cart}) => {
+const OrderSummary = ({cart, setCart}) => {
 
     const emptyOrder = (
         <div className="empty-order">
@@ -21,6 +21,8 @@ const OrderSummary = ({cart}) => {
                     name={item.name}
                     amount={item.amount}
                     price={item.price}
+                    cart={cart}
+                    setCart={setCart}
                 />
             ))}
         

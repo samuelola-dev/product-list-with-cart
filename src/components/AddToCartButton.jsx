@@ -2,10 +2,9 @@ import {useState} from "react";
 import "./AddToCartButton.css";
 import cartIcon from "../assets/images/icon-add-to-cart.svg";
 
-const AddToCartButton = ({amount, setAmount, product, cart, setCart}) => {
+const AddToCartButton = ({amount, product, cart, setCart}) => {
 
     const increaseAmount = () => {
-        setAmount(amount => amount + 1);
 
         setCart(cart => {
 
@@ -22,11 +21,10 @@ const AddToCartButton = ({amount, setAmount, product, cart, setCart}) => {
         })
     }
 
-        // if cart item name exists in the cart, update the quantity by one
+        // if cart item name exists in the cart, update the amount by one
         // if not add new product to cart
 
     const decreaseAmount = () => {
-        setAmount(amount =>  amount - 1);
 
         setCart(cart => {
 

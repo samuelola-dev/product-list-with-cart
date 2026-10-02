@@ -1,9 +1,12 @@
 import "./CartItem.css";
-import removeItem from "../assets/images/icon-remove-item.svg";
 
-const CartItem = ({name, amount, price}) => {
+const CartItem = ({name, amount, price, cart, setCart}) => {
 
     const total = amount * price;
+
+    const removeItem = () => {
+        setCart(cart => cart.filter(item => item.name !== name));
+    };
 
     return (
         <div className="cart-item">
@@ -15,7 +18,9 @@ const CartItem = ({name, amount, price}) => {
                     <span>${total.toFixed(2)}</span>
                 </p>
             </div>
-            <img src={removeItem}/>
+            <button className="remove-item" onClick={removeItem}>
+                <img src={"/images/icon-remove-item.svg"}/>
+            </button>
         </div>
     );
 }

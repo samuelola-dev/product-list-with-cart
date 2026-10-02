@@ -8,7 +8,8 @@ const ProductCard = ({product, cart, setCart}) => {
 
     const {desktop} = image;
 
-    const [amount, setAmount] = useState(0);
+    // get amount of product from cart
+    const amount = cart.find(item => item.name === product.name)?.amount ?? 0;
 
     return(
         <div className={"product-card"}>
@@ -20,7 +21,6 @@ const ProductCard = ({product, cart, setCart}) => {
 
             <AddToCartButton
                 amount={amount} 
-                setAmount={setAmount}
                 product={{
                     name: product.name,
                     price: product.price

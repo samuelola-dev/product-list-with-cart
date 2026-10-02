@@ -18,9 +18,11 @@ const App = () => {
                     <ProductList list={data} cart={cart} setCart={setCart}/>
                 </section>
                 <section>
-                    <OrderSummary cart={cart}/>
+                    <OrderSummary cart={cart} setCart={setCart}/>
                 </section>
             </main>
+
+            <p style={{textAlign: "center"}}>created by Samuel Ola</p>
         </>
     )
 };
