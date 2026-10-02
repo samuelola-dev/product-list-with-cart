@@ -4,7 +4,7 @@
     border-radius: 1rem;
 }
 
-h2{
+.cart-summary h2{
     position: relative;
     top: 12px;
     font-size: 1.4rem;

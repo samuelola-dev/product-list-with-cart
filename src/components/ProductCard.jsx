@@ -23,14 +23,15 @@ const ProductCard = ({product, cart, setCart}) => {
                 amount={amount} 
                 product={{
                     name: product.name,
-                    price: product.price
+                    price: product.price,
+                    image: product.image
                 }}
                 cart={cart}
                 setCart={setCart}
             />
 
-            <p>{name}</p>
             <p>{category}</p>
+            <p>{name}</p>
             <p>${price.toFixed(2)}</p>
         </div>
     );

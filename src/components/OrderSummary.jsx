@@ -1,5 +1,7 @@
-import "./OrderSummary.css"
+import { useState } from "react";
+import "./OrderSummary.css";
 import CartItem from "./CartItem";
+import OrderConfirmation from "./OrderConfirmation";
 import carbonNeutral  from "../assets/images/icon-carbon-neutral.svg";
 
 const OrderSummary = ({cart, setCart}) => {
@@ -12,6 +14,9 @@ const OrderSummary = ({cart, setCart}) => {
     );
 
     const orderTotal = cart.reduce((total, item) => total + item.price * item.amount, 0);
+
+    // confirm order state
+    const [confirm, setConfirm] = useState(false);
 
     const orderSummary = (
         <>
@@ -36,7 +41,10 @@ const OrderSummary = ({cart, setCart}) => {
                 <p>This is a <span>carbon-neutral</span> delivery</p>
             </div>
         
-            <button className="confirm-order">Confirm Order</button>
+            <button className="confirm-order" onClick={()=>setConfirm(confirm => !confirm)}>Confirm Order</button>
+            {confirm && (
+                <OrderConfirmation cart={cart}/>
+            )};
         </>
     );
 

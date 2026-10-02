@@ -1,5 +1,6 @@
 :root{
     --red: hsl(14, 86%, 42%);
+    --red-dark: hsl(14, 86%, 32%);
     --green: hsl(159, 69%, 38%);
     --rose-50: hsl(20, 50%, 98%);
     --rose-100: hsl(13, 31%, 94%);
@@ -20,7 +21,8 @@
 
 body{
     font-family: "Red Hat Text", sans serif;
-    background-color: var(--rose-50);
+    /* background-color: var(--rose-50); */
+    background-color: #E0F6FF;
 }
 
 h1{

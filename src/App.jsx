@@ -3,6 +3,7 @@ import {useState} from "react";
 import OrderSummary from "./components/OrderSummary";
 import ProductList from "./components/ProductList";
 import data from "../src/data/data.json";
+import OrderConfirmation from "./components/OrderConfirmation";
 
 const App = () => {
 
@@ -12,7 +13,7 @@ const App = () => {
 
     return(
         <>
-            <main>
+            {/* <main>
                 <section>
                     <h1>Desserts</h1>
                     <ProductList list={data} cart={cart} setCart={setCart}/>
@@ -22,7 +23,8 @@ const App = () => {
                 </section>
             </main>
 
-            <p style={{textAlign: "center"}}>created by Samuel Ola</p>
+            <p style={{textAlign: "center"}}>created by Samuel Ola</p> */}
+            <OrderConfirmation/>
         </>
     )
 };

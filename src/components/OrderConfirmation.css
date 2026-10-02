@@ -1,0 +1,46 @@
+.dialog{
+    padding: 30px;
+    background-color: white;
+    border: none;
+    border-radius: 1rem;
+    
+    /* remove later */
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    /* remove later */
+ 
+}
+
+.dialog > img{
+    width: 35px;
+    height: 35px;
+}
+
+.dialog h2{
+    font-size: 1.7rem;
+    line-height: 0.4;
+}
+
+.dialog > p{
+    font-size: 14px;
+    color: var(--rose-300);
+}
+
+.dialog button{
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    font-family: inherit;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--red);
+    border: none;
+    border-radius: 2rem;
+}
+
+.dialog button:hover{
+    background-color: var(--red-dark);
+}
