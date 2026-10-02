@@ -1,6 +1,5 @@
 import {useState} from "react";
 import "./AddToCartButton.css";
-import cartIcon from "../assets/images/icon-add-to-cart.svg";
 
 const AddToCartButton = ({amount, product, cart, setCart}) => {
 
@@ -39,7 +38,7 @@ const AddToCartButton = ({amount, product, cart, setCart}) => {
 
     const addToCart = (
         <button className="add-to-cart" onClick={increaseAmount}>
-            <img src={cartIcon} alt="cart button"/>
+            <img src={"/images/icon-add-to-cart.svg"} alt="cart button"/>
             <span>Add to Cart</span>
         </button>
     )

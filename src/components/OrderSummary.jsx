@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./OrderSummary.css";
 import CartItem from "./CartItem";
 import OrderConfirmation from "./OrderConfirmation";
-import carbonNeutral  from "../assets/images/icon-carbon-neutral.svg";
 
 const OrderSummary = ({cart, setCart}) => {
 
@@ -37,7 +36,7 @@ const OrderSummary = ({cart, setCart}) => {
             </div>
         
             <div className="cart-info">
-                <img src={carbonNeutral}/>
+                <img src={"/images/icon-carbon-neutral.svg"}/>
                 <p>This is a <span>carbon-neutral</span> delivery</p>
             </div>
         
