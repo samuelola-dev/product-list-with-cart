@@ -3,7 +3,6 @@ import {useState} from "react";
 import OrderSummary from "./components/OrderSummary";
 import ProductList from "./components/ProductList";
 import data from "../src/data/data.json";
-import OrderConfirmation from "./components/OrderConfirmation";
 
 const App = () => {
 
@@ -23,7 +22,7 @@ const App = () => {
                 </section>
             </main>
 
-            <p style={{textAlign: "center"}}>created by Samuel Ola</p>
+            <p id="author">coded by <span>Samuel Ola</span></p>
         </>
     )
 };

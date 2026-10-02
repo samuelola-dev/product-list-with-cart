@@ -48,3 +48,14 @@
 .confirmation-item > p{
     font-weight: 600;
 }
+
+/* mobile responsiveness */
+@media (max-width: 768px){
+
+    /* name */
+    .item-details p:nth-of-type(1){
+        font-weight: bold;
+        font-size: 0.56rem;
+        line-height: 0.7;   
+    }
+}

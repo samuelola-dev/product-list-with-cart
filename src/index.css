@@ -44,3 +44,31 @@ button:hover{
     cursor: pointer;
     font-family: inherit;
 }
+
+button{
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* samuelol-dev */
+#author{
+    text-align: center;
+}
+
+#author span{
+    color: var(--red);
+}
+
+/* mobile-responsiveness */
+@media (max-width: 768px) {
+    main{
+        grid-template-columns: 1fr;
+    }
+
+    body{
+        margin: 0%;
+        /* user-select: none; */
+    }
+}
+
+
