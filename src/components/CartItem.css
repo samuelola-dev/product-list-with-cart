@@ -26,7 +26,7 @@
     color: var(--red);
 }
 
-/* cost */
+/* price */
 .cart-item-details span:nth-of-type(2){
     display: inline-block;
     color: var(--rose-400)

@@ -43,7 +43,12 @@ const OrderSummary = ({cart, setCart}) => {
         
             <button className="confirm-order" onClick={()=>setConfirm(confirm => !confirm)}>Confirm Order</button>
             {confirm && (
-                <OrderConfirmation cart={cart}/>
+                <OrderConfirmation 
+                    cart={cart} 
+                    setCart={setCart}
+                    confirm={confirm}
+                    setConfirm={setConfirm}
+                />
             )};
         </>
     );

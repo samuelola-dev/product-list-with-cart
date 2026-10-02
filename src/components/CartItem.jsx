@@ -14,7 +14,7 @@ const CartItem = ({name, amount, price, cart, setCart}) => {
                 <p>{name}</p>
                 <p className="cart-item-details">
                     <span>{amount}x</span>&nbsp;&nbsp;&nbsp;
-                    <span>@ {price.toFixed(2)}</span>&nbsp;&nbsp;&nbsp;
+                    <span>@ ${price.toFixed(2)}</span>&nbsp;&nbsp;&nbsp;
                     <span>${total.toFixed(2)}</span>
                 </p>
             </div>

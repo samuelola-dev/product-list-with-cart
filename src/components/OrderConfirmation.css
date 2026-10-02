@@ -1,35 +1,45 @@
-.dialog{
-    padding: 30px;
+dialog{
+    width: 400px;
+    padding: 25px;
     background-color: white;
     border: none;
     border-radius: 1rem;
-    
-    /* remove later */
-    width: fit-content;
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-    /* remove later */
- 
+    overflow: hidden;
 }
 
-.dialog > img{
-    width: 35px;
-    height: 35px;
+.order-content {
+    max-height: 40vh;
+    overflow-y: auto;
 }
 
-.dialog h2{
+.order-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.order-content::-webkit-scrollbar-thumb {
+    background: var(--red);
+    border-radius: 1rem;
+}
+
+
+/* image */
+.dialog-content img{
+    width: 32px;
+    height: 32px;
+}
+
+
+dialog h2{
     font-size: 1.7rem;
     line-height: 0.4;
 }
 
-.dialog > p{
+.dialog-content > p{
     font-size: 14px;
     color: var(--rose-300);
 }
 
-.dialog button{
+dialog button{
     width: 100%;
     padding: 10px;
     margin: 20px 0 0 0;
@@ -41,6 +51,19 @@
     border-radius: 2rem;
 }
 
-.dialog button:hover{
+dialog button:hover{
     background-color: var(--red-dark);
 }
+
+dialog .order-total{
+    padding: 4px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--rose-50);
+}
+
+dialog .order-total p:nth-of-type(1){
+    font-size: 0.9rem;
+}
+

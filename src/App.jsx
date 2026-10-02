@@ -13,7 +13,7 @@ const App = () => {
 
     return(
         <>
-            {/* <main>
+            <main>
                 <section>
                     <h1>Desserts</h1>
                     <ProductList list={data} cart={cart} setCart={setCart}/>
@@ -23,8 +23,7 @@ const App = () => {
                 </section>
             </main>
 
-            <p style={{textAlign: "center"}}>created by Samuel Ola</p> */}
-            <OrderConfirmation/>
+            <p style={{textAlign: "center"}}>created by Samuel Ola</p>
         </>
     )
 };

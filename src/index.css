@@ -21,8 +21,7 @@
 
 body{
     font-family: "Red Hat Text", sans serif;
-    /* background-color: var(--rose-50); */
-    background-color: #E0F6FF;
+    background-color: var(--rose-50);
 }
 
 h1{
