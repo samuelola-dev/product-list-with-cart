@@ -29,6 +29,10 @@ h1{
     color: var(--rose-900);
 }
 
+h1 span{
+    color: var(--red)
+}
+
 main{
     margin: 0 6.5%;
     display: grid;

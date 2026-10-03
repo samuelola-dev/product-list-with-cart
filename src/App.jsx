@@ -14,7 +14,7 @@ const App = () => {
         <>
             <main>
                 <section>
-                    <h1>Desserts</h1>
+                    <h1>Desserts<span>.</span></h1>
                     <ProductList list={data} cart={cart} setCart={setCart}/>
                 </section>
                 <section>
