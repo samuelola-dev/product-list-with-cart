@@ -25,6 +25,8 @@ body{
 }
 
 h1{
+    font-family: "Playfair Display", Georgia, serif;
+    /* font-family: serif; */
     font-size: 2.3rem;
     color: var(--rose-900);
 }
